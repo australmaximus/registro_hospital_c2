@@ -19,10 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::apiResource('/hospitales', HospitalesController::class);
-// Route::apiResource('/doctores', DoctoresController::class);
-// Route::apiResource('/pacientes', PacientesController::class);
-
 Route::get('/hospitales',[HospitalesController::class,'index']);
 Route::get('/hospitales/{hospital}',[HospitalesController::class,'show']);
 Route::post('/hospitales',[HospitalesController::class,'store']);

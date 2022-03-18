@@ -4,7 +4,13 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class PacientesProvider {
-  final String apiURL = 'http://10.0.2.2:8000/api';
+  final String apiURL = 'http://10.0.2.2:8000/api'; // emulador AVD
+  // final String apiURL = 'http://192.168.1.84:8000/api'; // dirección ipv4 (ipconfig - cmd) dispositivo físico
+  /*
+    Agregar regla al Firewall de Windows (Permitir conexión), Puerto 8000, nombre Laravel
+    Lanzar el servidor de Laravel para todas las IP (dispositivo físico)
+    php artisan serve --host 0.0.0.0
+  */
 
   Future<List<dynamic>> getHospitales() async {
     var uri = Uri.parse('$apiURL/hospitales');
