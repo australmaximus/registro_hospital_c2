@@ -27,9 +27,10 @@
 #### Ejecutar las migraciones
 - php artisan migrate
 
-#### Correr el servicio
+#### Correr el servicio localmente
 - php artisan serve
-o
+
+#### Correr el servicio para todas las IP
 - php artisan serve --host 0.0.0.0
 
 
